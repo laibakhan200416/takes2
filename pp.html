@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="body2">
+  <div class="app-container">
+    <h1>📝 Task Manager App</h1>
+    
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <select id="taskStatus">
+        <option value="todo">To Do</option>
+        <option value="inprogress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
+    </div>
+
+    <p id="taskCount">Total Tasks: 0</p>
+
+    <div class="task-sections">
+      <div>
+        <h2>To Do</h2>
+        <ul id="todoList" class="task-list"></ul>
+      </div>
+      <div>
+        <h2>In Progress</h2>
+        <ul id="inprogressList" class="task-list"></ul>
+      </div>
+      <div>
+        <h2>Done</h2>
+        <ul id="doneList" class="task-list"></ul>
+      </div>
+    </div>
+  </div>
+<script src="./app.js"></script>
+</body>
+</html>
+
